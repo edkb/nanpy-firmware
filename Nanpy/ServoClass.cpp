@@ -39,6 +39,11 @@ void nanpy::ServoClass::elaborate( nanpy::MethodDescriptor* m ) {
             m->returns(v[m->getObjectId()]->readMicroseconds());
         }
 
+        if (strcmp(m->getName(), "attach") == 0) {
+            v[m->getObjectId()]->write(m->getInt(0));
+            m->returns(0);
+        }
+
         if (strcmp(m->getName(), "detach") == 0) {
             v[m->getObjectId()]->detach();
             m->returns(0);
