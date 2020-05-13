@@ -42,7 +42,7 @@
 // I2C
 #define USE_Wire                                    0
 
-#define USE_Servo                                   0
+#define USE_Servo                                   1
 
 #define USE_Stepper                                 0
 
